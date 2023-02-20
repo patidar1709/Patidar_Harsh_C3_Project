@@ -64,4 +64,14 @@ public class Restaurant {
         return name;
     }
 
+
+    public int getTotalPrice(List<String> items) {
+        return 0;
+    }
+
+    public void displayTotalPrice(List<String> items) {
+        int totalPrice = getTotalPrice(items);
+        System.out.println("Your Order Will cost:" + totalPrice);
+    }
+
 }

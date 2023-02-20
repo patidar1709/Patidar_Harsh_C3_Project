@@ -3,6 +3,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import java.time.LocalTime;
+import java.util.Collections;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -57,4 +58,10 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    @Test
+    public void get_total_cost_of_selected_items() {
+        int price = restaurant.getTotalPrice(Collections.singletonList("Sweet corn soup"));
+        assertEquals(price, 119);
+    }
 }
